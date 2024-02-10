@@ -1,0 +1,78 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ae5743d7ccfacc479ba888d0ceac731, type: 3}
+  m_Name: Freeze Trunk
+  m_EditorClassIdentifier: 
+  m_DefaultSprite: {fileID: -716617063, guid: 8c142adfa7417e747bff2f00cdd3b4a5, type: 3}
+  m_DefaultGameObject: {fileID: 0}
+  m_DefaultColliderType: 1
+  m_TilingRules:
+  - m_Id: 0
+    m_Sprites:
+    - {fileID: -716617063, guid: 8c142adfa7417e747bff2f00cdd3b4a5, type: 3}
+    - {fileID: -1588935691, guid: 8c142adfa7417e747bff2f00cdd3b4a5, type: 3}
+    - {fileID: -1325734057, guid: 8c142adfa7417e747bff2f00cdd3b4a5, type: 3}
+    - {fileID: 60181761, guid: 8c142adfa7417e747bff2f00cdd3b4a5, type: 3}
+    - {fileID: 66890078, guid: 8c142adfa7417e747bff2f00cdd3b4a5, type: 3}
+    - {fileID: 1990503546, guid: 8c142adfa7417e747bff2f00cdd3b4a5, type: 3}
+    - {fileID: -1743913285, guid: 8c142adfa7417e747bff2f00cdd3b4a5, type: 3}
+    - {fileID: 95792356, guid: 8c142adfa7417e747bff2f00cdd3b4a5, type: 3}
+    - {fileID: 126326473, guid: 8c142adfa7417e747bff2f00cdd3b4a5, type: 3}
+    - {fileID: -520157078, guid: 8c142adfa7417e747bff2f00cdd3b4a5, type: 3}
+    - {fileID: -442482644, guid: 8c142adfa7417e747bff2f00cdd3b4a5, type: 3}
+    - {fileID: 1119574503, guid: 8c142adfa7417e747bff2f00cdd3b4a5, type: 3}
+    - {fileID: 1767157533, guid: 8c142adfa7417e747bff2f00cdd3b4a5, type: 3}
+    - {fileID: 1717193574, guid: 8c142adfa7417e747bff2f00cdd3b4a5, type: 3}
+    - {fileID: 1588839956, guid: 8c142adfa7417e747bff2f00cdd3b4a5, type: 3}
+    m_GameObject: {fileID: 0}
+    m_MinAnimationSpeed: 1
+    m_MaxAnimationSpeed: 1
+    m_PerlinScale: 0.5
+    m_Output: 1
+    m_ColliderType: 1
+    m_RandomTransform: 0
+    m_Neighbors: 0300000001000000
+    m_NeighborPositions:
+    - {x: 0, y: -1, z: 0}
+    - {x: 0, y: 1, z: 0}
+    m_RuleTransform: 0
+  - m_Id: 3
+    m_Sprites:
+    - {fileID: -1551431292, guid: 8c142adfa7417e747bff2f00cdd3b4a5, type: 3}
+    - {fileID: 1403960921, guid: 8c142adfa7417e747bff2f00cdd3b4a5, type: 3}
+    - {fileID: -960834808, guid: 8c142adfa7417e747bff2f00cdd3b4a5, type: 3}
+    - {fileID: 2005536047, guid: 8c142adfa7417e747bff2f00cdd3b4a5, type: 3}
+    - {fileID: -1401564953, guid: 8c142adfa7417e747bff2f00cdd3b4a5, type: 3}
+    m_GameObject: {fileID: 0}
+    m_MinAnimationSpeed: 1
+    m_MaxAnimationSpeed: 1
+    m_PerlinScale: 0.5
+    m_Output: 1
+    m_ColliderType: 1
+    m_RandomTransform: 0
+    m_Neighbors: 05000000050000000100000001000000
+    m_NeighborPositions:
+    - {x: -1, y: 0, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 0, y: -1, z: 0}
+    m_RuleTransform: 2
+  alwaysConnect: 0
+  tilesToConnect3:
+  - {fileID: 11400000, guid: 593c5e0eff42cb34ab14182188253fa6, type: 2}
+  - {fileID: 11400000, guid: 240c019781aa0f74dba443aefec26bd9, type: 2}
+  - {fileID: 11400000}
+  tilesToConnect4: []
+  tilesToConnect5:
+  - {fileID: 11400000, guid: 4bfebd06b9eb85e498a13778e84005a9, type: 2}
+  tilesToConnect6: []
+  checkSelf: 0

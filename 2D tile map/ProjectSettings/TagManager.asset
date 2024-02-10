@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Ground
+  - EndDoor
+  - Souris
+  - Procedural Generation
+  - Gun
+  - Monster
+  - Bullet
+  - Sword
+  - Pickaxe
+  - Canvas
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Bottom
+    uniqueID: 621543457
+    locked: 0
+  - name: Topology
+    uniqueID: 1159749145
+    locked: 0
+  - name: Vegetation
+    uniqueID: 2222272075
+    locked: 0
+  - name: Fold
+    uniqueID: 936156161
+    locked: 0

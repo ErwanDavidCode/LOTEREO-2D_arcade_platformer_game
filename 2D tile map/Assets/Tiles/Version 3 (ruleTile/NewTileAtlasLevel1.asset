@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07bf68e2faa67c0478dc18dc35e23bb8, type: 3}
+  m_Name: NewTileAtlasLevel1
+  m_EditorClassIdentifier: Assembly-CSharp::TileAtlas
+  foldTile: {fileID: 11400000, guid: 4134c4bd670237f44a66d815ddcffb40, type: 2}
+  waterLeftTile: {fileID: 11400000, guid: 483744f8117d5d84481f66e0eb497b3d, type: 2}
+  waterRightTile: {fileID: 11400000, guid: 5c4c482904e8d2748a33f66eb6bbd45b, type: 2}
+  grassTile: {fileID: 11400000, guid: 282dd983a244d3a4fa670555cd060ea9, type: 2}
+  dirtTile: {fileID: 11400000, guid: ebbe6e3877f90aa48a9df72ef1655866, type: 2}
+  stoneTile: {fileID: 11400000, guid: 6b7bbc75ca6f4264585c3ca4d9ccaa69, type: 2}
+  clayTile: {fileID: 11400000, guid: 14fbcbc82dcf6c64da62d1e0a36624b3, type: 2}
+  bottomDirtTile: {fileID: 11400000, guid: 3148517dc6f6db147aa781e44a599409, type: 2}
+  bottomStoneTile: {fileID: 11400000, guid: 39f062603c98d7d4b8a6476f69325d86, type: 2}
+  trunkTile: {fileID: 11400000, guid: cc066e025ec39a44ca91c6c4a6036682, type: 2}
+  leafTile: {fileID: 11400000, guid: 4b7cee39199e56c42a756254259bb321, type: 2}
+  herbTile: {fileID: 11400000, guid: dde232b4b3158094481d6d294800d860, type: 2}
+  flower1Tile: {fileID: 11400000, guid: ab04b910c8786284b877a68b30ca111e, type: 2}
+  lianaTile: {fileID: 11400000, guid: 4c0e9d2c212562f48b2021180b2daf61, type: 2}
+  goldTile: {fileID: 11400000, guid: 24d3f7196b042b747b1a53c4fead6532, type: 2}
+  doorCloseTile: {fileID: 11400000, guid: 1168bd3686edce944bc263ab21079bda, type: 2}
+  doorOpenTile: {fileID: 11400000, guid: 6af1fe690514fb54e93f7ce7438d4fe2, type: 2}
+  snowTile: {fileID: 11400000, guid: 5de840c3d3f0ca346b820f2f4aa22703, type: 2}
+  darkStoneTile: {fileID: 11400000, guid: b7a2ffbaf8581564d98e4773babc7f84, type: 2}
+  freezeTrunkTile: {fileID: 11400000, guid: 38b8546fe68796844ab63222de610683, type: 2}
+  freezeLeafTile: {fileID: 11400000, guid: a63992f992dc89044a0935aa151e56e3, type: 2}
+  freezeFlower1Tile: {fileID: 11400000, guid: 8673afb7d29185749a09adb63dd27f28, type: 2}
+  freezeLianaTile: {fileID: 11400000, guid: 5e44b3d1aa5eb3d49978dcca714ed974, type: 2}

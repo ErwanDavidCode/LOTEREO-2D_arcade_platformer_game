@@ -1,0 +1,78 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ae5743d7ccfacc479ba888d0ceac731, type: 3}
+  m_Name: Freeze Liana
+  m_EditorClassIdentifier: 
+  m_DefaultSprite: {fileID: 172329301, guid: adcd942c3dab68647a0b72512239bb32, type: 3}
+  m_DefaultGameObject: {fileID: 0}
+  m_DefaultColliderType: 1
+  m_TilingRules:
+  - m_Id: 3
+    m_Sprites:
+    - {fileID: 831877505, guid: adcd942c3dab68647a0b72512239bb32, type: 3}
+    - {fileID: 1566316508, guid: adcd942c3dab68647a0b72512239bb32, type: 3}
+    - {fileID: 172329301, guid: adcd942c3dab68647a0b72512239bb32, type: 3}
+    m_GameObject: {fileID: 0}
+    m_MinAnimationSpeed: 1
+    m_MaxAnimationSpeed: 1
+    m_PerlinScale: 0.5
+    m_Output: 1
+    m_ColliderType: 1
+    m_RandomTransform: 0
+    m_Neighbors: 0300000001000000
+    m_NeighborPositions:
+    - {x: 0, y: 1, z: 0}
+    - {x: 0, y: -1, z: 0}
+    m_RuleTransform: 2
+  - m_Id: 0
+    m_Sprites:
+    - {fileID: 445573411, guid: adcd942c3dab68647a0b72512239bb32, type: 3}
+    - {fileID: 1366518208, guid: adcd942c3dab68647a0b72512239bb32, type: 3}
+    - {fileID: 792660176, guid: adcd942c3dab68647a0b72512239bb32, type: 3}
+    m_GameObject: {fileID: 0}
+    m_MinAnimationSpeed: 1
+    m_MaxAnimationSpeed: 1
+    m_PerlinScale: 0.5
+    m_Output: 1
+    m_ColliderType: 1
+    m_RandomTransform: 0
+    m_Neighbors: 0100000001000000
+    m_NeighborPositions:
+    - {x: 0, y: 1, z: 0}
+    - {x: 0, y: -1, z: 0}
+    m_RuleTransform: 2
+  - m_Id: 1
+    m_Sprites:
+    - {fileID: 1660839521, guid: adcd942c3dab68647a0b72512239bb32, type: 3}
+    - {fileID: 2136689996, guid: adcd942c3dab68647a0b72512239bb32, type: 3}
+    - {fileID: 821924449, guid: adcd942c3dab68647a0b72512239bb32, type: 3}
+    - {fileID: -1059309965, guid: adcd942c3dab68647a0b72512239bb32, type: 3}
+    m_GameObject: {fileID: 0}
+    m_MinAnimationSpeed: 1
+    m_MaxAnimationSpeed: 1
+    m_PerlinScale: 0.5
+    m_Output: 1
+    m_ColliderType: 1
+    m_RandomTransform: 0
+    m_Neighbors: 0100000000000000
+    m_NeighborPositions:
+    - {x: 0, y: 1, z: 0}
+    - {x: 0, y: -1, z: 0}
+    m_RuleTransform: 2
+  alwaysConnect: 0
+  tilesToConnect3:
+  - {fileID: 11400000, guid: 593c5e0eff42cb34ab14182188253fa6, type: 2}
+  - {fileID: 11400000, guid: 9d9b87176ea39ea408a84b177dcc3d99, type: 2}
+  tilesToConnect4: []
+  tilesToConnect5: []
+  tilesToConnect6: []
+  checkSelf: 0
