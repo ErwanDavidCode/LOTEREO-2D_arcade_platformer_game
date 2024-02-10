@@ -1,12 +1,13 @@
 Coding Weeks 2023-2024
 =
-Membres du groupe : Erwan DAVID, Yani HAMMACHE, Tristan NOUETTE, Hammam ZELAOUI, Lucas HERNANDEZ, Martin HUET
 
-Notre jeu s'appelle LOTEREO (Legends Of The Eternal Realm: Epic Odyssey).
-Il sera sur Unity, sous C#.
+# Introduction
+Ce projet Unity en C# est un jeu arcade platformer 2D.
 
-Sommaire :
-=
+L'objectif du joueur est de passer par la porte du dernier _(2ème)_ niveau. Pour ouvrir les portes de chaque niveau, qui mènent au niveau suivant, le joueur doit tuer un certain nombre d'IA qui se trouvent sur la carte.
+
+# Sommaire :
+
 1. MVPs / Feuille de route avec répartition des rôles
 2. MVC 
 3. Cas d’usage
@@ -15,8 +16,8 @@ Sommaire :
 
 
 
-1.MVPs / Feuille de route 
-=
+# 1.MVPs / Feuille de route 
+
 Voici comment nous avons hiérarchisé la construction de nos MVPs :
 
 ➤ MVP1 : générer un terrain (map) en 2D de manière procédurale. Nous souhaitons aussi intégrer des éléments d’ambiance à notre map (arbre, cavernes, creux, dénivelés…) répartis de manière semi-aléatoire sur la map. Cela permet de construire l’ambiance globale de notre jeu, tout en lui apportant l’intérêt majeur d’être attractif car à chaque nouvelle partie, la map sera différente. **(Erwan / Martin / Lucas)**
@@ -60,9 +61,9 @@ Lorsqu’un personnage n’a plus de vie, il est détruit en se décomposant
 
 
 
-2.MVC 
-=
-Un exemple d’architecture MVC pour le GameObject “Player” est disponible dans la présentation "LOTEREO_CW_gp_17.pdf" disponible sur GitLab.
+# 2.MVC 
+
+Un exemple d’architecture MVC pour le GameObject “Player” est disponible dans la présentation "LOTEREO_CW_gp_17.pdf" disponible sur ce repository.
 
 Un MVC (Modèle Vue Contrôleur) décline la logique de jeu entre le modèle du jeu (modèle), sa représentation graphique (vue) et sa logique de contrôle (contrôleur). Dans le cas général, les spécificités de ces trois composants sont : 
 
@@ -75,8 +76,8 @@ Dans notre cas concret, l’utilisation même de Unity nous impose une logique M
 
 
 
-3.Cas d’usage
-=
+# 3.Cas d’usage
+
 Le public ciblé par ce jeu est une population d’individus âgés de 16 à 50 ans. Aucune expérience en jeu vidéo n’est particulièrement requise. Ce jeu convient parfaitement aux personnes appréciant le Pixel art. 
 
 Dans ce jeu, le joueur devra se challenger pour réussir à passer les niveaux et devenir le champion de LOTEREO. Ce jeu a pour ambition de divertir son utilisateur et le pousser dans ses retranchements face à des ennemis assoiffés de sang.
@@ -91,8 +92,8 @@ Immiscez vous dans un univers fantastique et profitez d’une expérience unique
 
 
 
-4.Description des fonctionnalités
-=
+# 4.Description des fonctionnalités
+
 Déplacements du joueur : droite ←, gauche →, saut “esp”, tirer “E”, afficher le menu “échap” et changer d’outils/armes “tab”.
 
 Nous pouvons régler grand nombre de caractéristiques de notre jeu grâce à des paramètres libres, à savoir : 
@@ -107,8 +108,8 @@ Nous pouvons régler grand nombre de caractéristiques de notre jeu grâce à de
 
 
 
-5.Instructions d'installation et de lancement du jeu
-=
+# 5.Instructions d'installation et de lancement du jeu
+
 Vous disposez de 3 options pour lancer le jeu : 
 
 ➤ Jouer sur la version “Page web” en cliquant sur le lien suivant : https://play.unity.com/mg/other/webgl-6se
