@@ -2,118 +2,118 @@ Coding Weeks 2023-2024
 =
 
 # Introduction
-Ce projet Unity en C# est un jeu arcade platformer 2D.
+This Unity project in C# is a 2D arcade platformer.
 
-L'objectif du joueur est de passer par la porte du dernier _(2ème)_ niveau. Pour ouvrir les portes de chaque niveau, qui mènent au niveau suivant, le joueur doit tuer un certain nombre d'IA qui se trouvent sur la carte.
+The player's objective is to pass through the door on the last _(2nd)_ level. To open the doors on each level, which lead to the next level, the player must kill a certain number of AIs on the map.
 
-# Sommaire :
+# Contents :
 
-1. MVPs / Feuille de route avec répartition des rôles
+1. MVPs / Roadmap with role allocation
 2. MVC 
-3. Cas d’usage
-4. Description des fonctionnalités (à expliciter)	
-5. Instructions d'installation et de lancement du jeu	
+3. Use cases
+4. Functionality description (to be explained)	
+5. Instructions for installing and launching the game	
 
 
 
-# 1.MVPs / Feuille de route 
+# 1.MVPs / Roadmap 
 
-Voici comment nous avons hiérarchisé la construction de nos MVPs :
+Here's how we've prioritized the construction of our MVPs:
 
-➤ MVP1 : générer un terrain (map) en 2D de manière procédurale. Nous souhaitons aussi intégrer des éléments d’ambiance à notre map (arbre, cavernes, creux, dénivelés…) répartis de manière semi-aléatoire sur la map. Cela permet de construire l’ambiance globale de notre jeu, tout en lui apportant l’intérêt majeur d’être attractif car à chaque nouvelle partie, la map sera différente. **(Erwan / Martin / Lucas)**
+➤ MVP1: generate a 2D terrain (map) procedurally. We also want to integrate ambient elements into our map (trees, caves, hollows, slopes...) distributed semi-randomly across the map. This will help build the overall ambience of our game, while adding the major advantage of being attractive, since each time you play a new game, the map will be different. **(Erwan / Martin / Lucas)**
 
-➤ MVP2 : Le personnage principal doit apparaître sur le terrain. A l’issue de cette étape, l’utilisateur sera capable de contrôler les déplacements du joueur grâce aux touches du clavier. Seul le déplacement du personnage sera compris dans cette étape (translation à droite, translation à gauche et saut vertical). Les touches assignées seront la barre espace pour le saut et les touches directionnelles pour les déplacements verticaux. **(Hammam / Yani)**
+➤ MVP2: The main character must appear on the field. At the end of this stage, the user will be able to control the player's movements using the keyboard keys. Only character movement will be included in this step (right translation, left translation and vertical jump). The keys assigned will be the space bar for jumping and the arrow keys for vertical movement. **(Hammam / Yani)**
 
-➤ MVP3 : La caméra suivra désormais le déplacement du personnage sur la map. **(Lucas / Erwan)**
+➤ MVP3: The camera will now follow the character's movement on the map. **(Lucas / Erwan)**
 
-➤ MVP4 : On fera apparaître automatiquement le personnage principal à l’extrémité gauche de la map. La quête principale du joueur prendra forme lors de cette étape. Une porte à l'extrémité droite sera créée, elle correspondra à l'endroit où doit se rendre notre personnage. Une fois la porte franchie, le niveau est gagné. Nous projetons de créer plusieurs niveaux dans une MVP ultérieure. Ainsi, la porte sera aussi le moyen d’accéder aux niveaux suivants. **(Erwan / Tristan)**
+➤ MVP4: The main character will automatically appear at the far left of the map. The player's main quest will take shape at this stage. A door at the far right will be created, corresponding to where our character must go. Once through the door, the level is won. We plan to create several levels in a future MVP. In this way, the door will also be the means to access subsequent levels. **(Erwan / Tristan)**
 
-➤ MVP5 : Nous ajouterons ensuite deux types d’ennemis. Au sol, une catégorie de monstre suivra le joueur dans une zone de détection définie par l’utilisateur. Lorsque ce monstre sera bloqué par un bloc de la map, il devra être en capacité de sauter par lui-même pour franchir cet obstacle. Dans les airs, un monstre volant suivra le joueur en continu mais à une vitesse de déplacement inférieure à ce dernier.
-Lors de la création de ces ennemis, nous esquisserons donc les premières interactions des monstres avec notre personnage, le but étant que ces derniers détectent et attaquent le personnage principal. La prise en compte des pertes de points de vie du joueur et des monstres aura lieu dans une MVP ultérieure. **(Tristan / Hammam / Martin)**
+➤ MVP5: We'll be adding two types of enemy next. On the ground, a category of monster will follow the player into a user-defined detection zone. When this monster is blocked by a block on the map, it will need to be able to jump by itself to clear this obstacle. In the air, a flying monster will follow the player continuously, but at a slower speed than the player.
+When creating these enemies, we'll sketch out the monsters' first interactions with our character, the aim being for them to detect and attack the main character. Player and monster hit point losses will be taken into account in a later MVP. **(Tristan / Hammam / Martin)**
 
-➤ MVP6 : Nous créerons une fonctionnalité qui remplira le rôle de “Manager’, et qui permettra de faire apparaître un nombre de monstres prédéfini par l’utilisateur sur la map. **(Lucas / Tristan)**
+➤ MVP6: We'll create a feature that fills the role of 'Manager', allowing a user-defined number of monsters to appear on the map. **(Lucas / Tristan)**
 
-➤ MVP7 : Nous ajoutons ensuite les interactions complémentaires entre notre personnage et les ennemis.  Lors de cette phase, le joueur sera muni d’une barre de vie. Il perdra alors des points de vie lors d’une collision avec un des monstres présentés en MVP4. Une fois touchée, le personnage aura une phase d’immunité d’une durée modulable par l’utilisateur. Cette invincibilité sera caractérisée par un clignotement du personnage. **(Tristan / Martin)**
+➤ MVP7: We then add complementary interactions between our character and enemies.  During this phase, the player will be equipped with a life bar. He will then lose health points when colliding with one of the monsters presented in MVP4. Once hit, the character will have an immunity phase, the duration of which can be adjusted by the user. This invincibility will be characterized by the character blinking. **(Tristan / Martin)**
 
-➤ MVP8 : Dans cette phase, nous donnerons à notre personnage la capacité d’infliger des dégâts aux ennemis. Pour ce faire, nous créerons des armes qui pourront être assignées au personnage principal grâce au choix de l'utilisateur (avec possibilité d’intervertir les armes). Par l’intermédiaire de ces dernières, le personnage pourra combattre les ennemis. Ainsi la quête du personnage sera complétée : en plus de devoir atteindre la porte, ce dernier devra tuer un certain nombre d’ennemis pour que la porte vers le niveau suivant s’ouvre. **(Erwan / Yani)**
+➤ MVP8: In this phase, we'll give our character the ability to inflict damage on enemies. To do this, we'll create weapons that can be assigned to the main character by user choice (with the option of swapping weapons). These weapons will enable the character to fight enemies. In this way, the character's quest is completed: in addition to reaching the door, he or she must kill a certain number of enemies for the door to the next level to open. **(Erwan / Yani)**
 
-➤ MVP9 : Dans cette phase, nous donnerons au joueur la possibilité de miner des blocs de terre à l’aide d’une pioche.  **(Erwan / Yani)**
+➤ MVP9: In this phase, we'll give the player the chance to mine blocks of earth using a pickaxe.  **(Erwan / Yani)**
 
-➤ MVP10 : Lorsque le niveau de vie d’un personnage (joueur ou ennemi) deviendra nul, ce dernier sera automatiquement détruit. **(Martin / Hammam / Tristan)**
+➤ MVP10: When a character's life level (player or enemy) becomes zero, it will be automatically destroyed. **(Martin / Hammam / Tristan)**
 
-➤ MVP11 : Nous ajouterons ensuite l'interface d’interaction entre le jeu et l’utilisateur. Cela comprend : 
-Menu principal (Play, Credits, Touches du jeu, Quit)
-Pendant la partie, l’affichage du nombre restant de monstres à tuer pour que la porte s’ouvre
-L’affichage d’un message “Niveau réussi” ou “Perdu” avec possibilité de revenir au menu principal le cas échéant 
+➤ MVP11: Next, we'll add the interaction interface between the game and the user. This includes: 
+Main menu (Play, Credits, Game buttons, Quit)
+During the game, display of the number of monsters remaining to be killed before the door opens.
+A “Level Passed” or “Lost” message is displayed, with the option of returning to the main menu if necessary. 
 **(Lucas / Martin)**
 
-➤ MVP12 : Lors de cette étape, nous élaborons les différents niveaux comme souhaité dès la MVP4. Pour que la différence de niveaux soit significative, plusieurs paramètres seront amenés à changer. Premièrement, les environnements seront modifiés (neige, nuit, …). Deuxièmement, pour que la difficulté soit croissante d’un niveau à l’autre, le nombre de monstres augmentera. **(Erwan)**
+➤ MVP12: In this step, we elaborate the different levels as desired from MVP4. For the difference in levels to be significant, several parameters will have to change. Firstly, the environments will be modified (snow, night, etc.). Secondly, to increase difficulty from one level to the next, the number of monsters will be increased. **(Erwan)**
 
 
-➤ MVP13 : Nous assignerons des animations au personnage et aux ennemis : 
-Mise en mouvement des personnages lors de leurs déplacements.
-Lorsqu’un personnage n’a plus de vie, il est détruit en se décomposant
+➤ MVP13: We'll assign character and enemy animations: 
+Setting characters in motion as they move.
+When a character has no life left, it is destroyed by decomposing
 **(Yani / Martin / Erwan)**
 
-➤ MVP14 : Lors de cette phase, nous développerons des effets sonores qui seront assignés à certaines étapes du jeu (grognement lors du déplacement des monstres, effet sonores lors de l’utilisation des armes, bruitages lorsqu'un personnage est touchée et un son différent lors d’une mort). **(Lucas / Hammam)**
+➤ MVP14: During this phase, we'll develop sound effects that will be assigned to certain stages of the game (growling when monsters move, sound effects when weapons are used, sound effects when a character is hit and a different sound when a character dies). **(Lucas / Hammam)**
 
-➤ MVP15 : Création du fond avec effet parallaxe avec déplacement de nuages. Ajout de particules à la mort d’une entité. (Erwan / Yani)
+➤ MVP15: Creation of background with parallax effect with cloud displacement. Particles added when an entity dies. (Erwan / Yani)
 
 
 
 # 2.MVC 
 
-Un exemple d’architecture MVC pour le GameObject “Player” est disponible dans la présentation "LOTEREO_CW_gp_17.pdf" disponible sur ce repository.
+An example of MVC architecture for the GameObject “Player” is available in the presentation “LOTEREO_CW_gp_17.pdf” available on this repository.
 
-Un MVC (Modèle Vue Contrôleur) décline la logique de jeu entre le modèle du jeu (modèle), sa représentation graphique (vue) et sa logique de contrôle (contrôleur). Dans le cas général, les spécificités de ces trois composants sont : 
+An MVC (Model View Controller) breaks down game logic into the game model (model), its graphical representation (view) and its control logic (controller). In the general case, the specifics of these three components are: 
 
-➤ Le modèle : il garde les valeurs calculées par le contrôleur en mémoire;
+➤ The model: it stores the values calculated by the controller in memory;
 
-➤ Le contrôleur : il réalise les calculs en temps réel des paramètres du jeu qu’il envoie au modèle. C’est lui qui régit tout le fonctionnement du jeu en prenant en compte les commandes imposées par l’utilisateur;
+➤ The controller: performs real-time calculations of the game parameters it sends to the model. It governs all game operation, taking into account commands imposed by the user;
 
-➤ La vue : elle est une représentation graphique du modèle adaptée à l’utilisateur et qui participe à l’aspect ludique du jeu. Cette représentation évolue au fur et à mesure de l’évolution des paramètres de jeu.
-Dans notre cas concret, l’utilisation même de Unity nous impose une logique MVC. En effet, on assigne des scripts à des objets graphiques. Ces scripts prennent en compte des paramètres qui sont amenés à évoluer au cours de la partie. Le contrôleur gère ces calculs en temps réel. Ces objets participent à la représentation visuelle du jeu et interagissent les uns avec les autres selon les valeurs de paramètres enregistrées dans le modèle.
-
-
-
-# 3.Cas d’usage
-
-Le public ciblé par ce jeu est une population d’individus âgés de 16 à 50 ans. Aucune expérience en jeu vidéo n’est particulièrement requise. Ce jeu convient parfaitement aux personnes appréciant le Pixel art. 
-
-Dans ce jeu, le joueur devra se challenger pour réussir à passer les niveaux et devenir le champion de LOTEREO. Ce jeu a pour ambition de divertir son utilisateur et le pousser dans ses retranchements face à des ennemis assoiffés de sang.
-
-Le mécanisme de jeu est relativement simple. A chaque niveau le nombre de monstres augmente. Il demande alors plus de concentration et de persévérance pour gagner.
-
-Ce jeu est complet et comprend des effets sonores et des animations participant à la beauté du jeu. Il est idéal pour ravir tous les sens de son utilisateur. 
-
-LOTEREO possède une rejouabilité presque infinie grâce à une génération procédurale des maps. Le joueur ne sombrera jamais dans l’ennui.
-
-Immiscez vous dans un univers fantastique et profitez d’une expérience unique !
+➤ The view: this is a graphical representation of the model, adapted to the user and contributing to the game's playfulness. This representation evolves as the game parameters change.
+In our case, the very use of Unity imposes an MVC logic. Scripts are assigned to graphical objects. These scripts take into account parameters that are bound to evolve over the course of the game. The controller manages these calculations in real time. These objects participate in the visual representation of the game and interact with each other according to the parameter values stored in the model.
 
 
 
-# 4.Description des fonctionnalités
+# 3.use case
 
-Déplacements du joueur : droite ←, gauche →, saut “esp”, tirer “E”, afficher le menu “échap” et changer d’outils/armes “tab”.
+The target audience for this game is individuals aged 16 to 50. No video game experience is particularly required. This game is ideal for people who enjoy pixel art. 
 
-Nous pouvons régler grand nombre de caractéristiques de notre jeu grâce à des paramètres libres, à savoir : 
+In this game, players must challenge themselves to pass the levels and become the LOTEREO champion. The game's ambition is to entertain its user and push him or her to the limit in the face of bloodthirsty enemies.
 
-- La taille des caves, densité de végétation, densité d’eau et largeur de la carte ;
-- La position sur la carte de la porte à atteindre ;
-- Le nombre de monstres qui apparaissent sur la carte à chaque niveau ;
-- La hauteur de saut du joueur, sa vitesse de déplacement, son temps d'invincibilité lorsqu’il est touché et son nombre de vie maximum ;
-- La gravité imposée aux balles du fusil ;
-- La vitesse de déplacement, la hauteur de saut, la distance de détection du joueur, le nombre de dégâts infligés au joueur et la probabilité de saut des montres terrestres ;
-- La vitesse de déplacement et le nombre de dégâts infligés au joueur du monstre.
+The game mechanics are relatively simple. The number of monsters increases with each level. You'll need more concentration and perseverance to win.
+
+The game is complete with sound effects and animations that add to its beauty. It's ideal for delighting all the senses. 
+
+LOTEREO has almost infinite replayability, thanks to procedural map generation. Players will never get bored.
+
+Immerse yourself in a fantastic universe and enjoy a unique experience!
 
 
 
-# 5.Instructions d'installation et de lancement du jeu
+# 4.feature descriptions
 
-Vous disposez de 3 options pour lancer le jeu : 
+Player movement: right ←, left →, jump “esp”, shoot “E”, display menu “escape” and change tools/weapons “tab”.
 
-➤ Jouer sur la version “Page web” en cliquant sur le lien suivant : https://play.unity.com/mg/other/webgl-6se
+We can adjust many of our game's features through free parameters, namely: 
 
-➤ Cloner le repository pour avoir la version exécutable, puis cliquer sur l’exécutable du fichier .exe qui se trouve dans le dossier “Jeu”.
+- Cellar size, vegetation density, water density and map width;
+- The position on the map of the door to be reached;
+- The number of monsters that appear on the map at each level;
+- The player's jump height, movement speed, invincibility time when hit and maximum number of lives;
+- The gravity imposed on shotgun bullets;
+- The player's movement speed, jump height, detection distance, the amount of damage inflicted on the player, and the jump probability of land monsters;
+- Monster movement speed and player damage.
 
-➤ Cloner le repository, ouvrir le projet “2D tile map” sur la version “2002.3.13f1” de Unity, puis appuyer sur Play.
+
+
+# 5.Instructions for installing and launching the game
+
+You have 3 options for launching the game: 
+
+➤ Play the “Web page” version by clicking on the following link: https://play.unity.com/mg/other/webgl-6se
+
+➤ Clone the repository to obtain the executable version, then click on the executable .exe file in the “Game” folder.
+
+➤ Clone the repository, open the “2D tile map” project on Unity version “2002.3.13f1”, then press Play.
